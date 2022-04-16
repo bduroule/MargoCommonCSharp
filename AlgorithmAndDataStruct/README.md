@@ -12,3 +12,15 @@ public class Node
 	public Node Next { get; set; }
 }
  ```
+ - Pour définir une liste avec un type de donnée stockée définissable au moment de l’instanciation de LinkedList il faut utiliser un type génerique `T` dans la signature de la class LinkedList
+```cs
+public class LinkedList<T>
+{
+	// code
+}
+```
+et initialiser de la magnere suivante 
+```cs
+LinkedList<int> numbers = new LinkedList<int>();
+LinkedList<string> strings = new LinkedList<string>();
+```
