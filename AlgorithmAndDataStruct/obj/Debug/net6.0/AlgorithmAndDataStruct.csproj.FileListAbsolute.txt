@@ -1,0 +1,12 @@
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/bin/Debug/net6.0/AlgorithmAndDataStruct.deps.json
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/bin/Debug/net6.0/AlgorithmAndDataStruct.dll
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/bin/Debug/net6.0/AlgorithmAndDataStruct.pdb
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/obj/Debug/net6.0/AlgorithmAndDataStruct.csproj.AssemblyReference.cache
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/obj/Debug/net6.0/AlgorithmAndDataStruct.GeneratedMSBuildEditorConfig.editorconfig
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/obj/Debug/net6.0/AlgorithmAndDataStruct.AssemblyInfoInputs.cache
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/obj/Debug/net6.0/AlgorithmAndDataStruct.AssemblyInfo.cs
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/obj/Debug/net6.0/AlgorithmAndDataStruct.csproj.CoreCompileInputs.cache
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/obj/Debug/net6.0/AlgorithmAndDataStruct.dll
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/obj/Debug/net6.0/refint/AlgorithmAndDataStruct.dll
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/obj/Debug/net6.0/AlgorithmAndDataStruct.pdb
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/obj/Debug/net6.0/ref/AlgorithmAndDataStruct.dll
