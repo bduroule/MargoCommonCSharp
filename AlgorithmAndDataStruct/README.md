@@ -78,4 +78,4 @@ public MyLinkedListNode<T> SortMiddleList()
 - voir trie dans le chapitre dédier
 
 ## Les arbres binaires
-
+![](Image/tree.jpg)
