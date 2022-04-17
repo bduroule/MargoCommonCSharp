@@ -78,4 +78,12 @@ public MyLinkedListNode<T> SortMiddleList()
 - voir trie dans le chapitre dédier
 
 ## Les arbres binaires
+
+- Un arbre en informatique est un maniere de structure des donne pour pouvoir hierachiser ces dernieres Un arbre est constitué de **nœuds**, reliés entre eux par des **arêtes** selon une relations parent enfant. On distingue trois types de  **nœuds**  :
+
+  - La  **racine**  de l’arbre est l’unique nœud ne possédant  pas de parent. *(ici noeud 1)*
+  - les  **feuilles**  (ou  _nœuds externes_), éléments ne possédant  pas de fils  dans l’arbre ; *(ici noeud 4 a 7)*
+   - les  **nœuds**  **internes**, éléments possédant des fils (sous-branches). *(ici noeud 2 et 3)*
+  
+  Le **chemin à la racine** d’un nœud est la liste des nœuds qu’il faut parcourir depuis la racine jusqu’au nœud considéré. voir ci-dessou : 
 ![](Image/tree.jpg)
