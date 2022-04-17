@@ -24,3 +24,22 @@ et initialiser de la magnere suivante
 LinkedList<int> numbers = new LinkedList<int>();
 LinkedList<string> strings = new LinkedList<string>();
 ```
+- Algoritm
+ 1. pour Supprimer un élément on va parcourir la liste en en regardant si le mallion d'après est la valeur a supprimer si c'est le cas on sort de la boucle et définit que le maillon suivant (élément a supprimer)  est égale a sont suivant.
+```cs
+public void Remove(T item)
+{
+    MyLinkedListNode<T> tmpListToRemove = Head;
+
+    while (tmpListToRemove.next != null) {
+        if (tmpListToRemove.next.item.Equals(item)) {
+            break ;
+        }
+        tmpListToRemove = tmpListToRemove.next;
+    }
+    if (tmpListToRemove.next != null)
+        tmpListToRemove.next = tmpListToRemove.next.next;
+    else
+        RemoveLast();
+}
+```
