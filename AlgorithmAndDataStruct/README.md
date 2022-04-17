@@ -43,3 +43,20 @@ public void Remove(T item)
         RemoveLast();
 }
 ```
+2. Pour renverser le une liste il faut parcourir la liste en swapent les maillons jusqu'au dernier élément
+```cs 
+public void ReversList()
+{
+    MyLinkedListNode<T> prev = null;
+    MyLinkedListNode<T> cur = Head;
+    MyLinkedListNode<T> tmp;
+
+    while(cur != null) {
+        tmp = cur.next;
+        cur.next = prev;
+        prev = cur;
+        cur = tmp;
+    }
+    Head = prev;
+}
+```
