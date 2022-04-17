@@ -73,4 +73,9 @@ public MyLinkedListNode<T> SortMiddleList()
     return TmpList;
 }
 ```
+### tableau
+- La principale différence entre un tableau et une liste c'est la manière dont elle sont stocker dans la mémoire la liste a ces maillons éparpiller dans la mémoire la ou le tableau est un suite d'élément qui ce suivent dans la mémoire 
+- voir trie dans le chapitre dédier
+
+## Les arbres binaires
 
