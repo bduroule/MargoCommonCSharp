@@ -60,3 +60,17 @@ public void ReversList()
     Head = prev;
 }
 ```
+3. Pour trouver le milieux d'une liste il faut parcourir cette dernière jusqu'a la moitié du nombre totale de ces élément soit avec un `Count` soit avec une fonction qui vas les compter. Et retourner de dernier élément parcouru 
+```cs
+public MyLinkedListNode<T> SortMiddleList()
+{
+    MyLinkedListNode<T> TmpList = Head;
+     Console.WriteLine($"count {Count / 2}");
+
+    for (int i = 0; i < Count / 2; i++) {
+        TmpList = TmpList.next;
+    }
+    return TmpList;
+}
+```
+
