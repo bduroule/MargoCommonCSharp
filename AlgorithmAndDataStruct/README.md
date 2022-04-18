@@ -87,3 +87,5 @@ public MyLinkedListNode<T> SortMiddleList()
   
   Le **chemin à la racine** d’un nœud est la liste des nœuds qu’il faut parcourir depuis la racine jusqu’au nœud considéré. voir ci-dessou : 
 ![](Image/tree.jpg)
+
+![](Image/BinaryTree.jpg)
