@@ -88,4 +88,6 @@ public MyLinkedListNode<T> SortMiddleList()
   Le **chemin à la racine** d’un nœud est la liste des nœuds qu’il faut parcourir depuis la racine jusqu’au nœud considéré. voir ci-dessou : 
 ![](Image/tree.jpg)
 
+un arbre binaire est arbre qui n'as que maximum 2 **noeud** enfant par **noeud** parent, pour ce qui est d'un arbre binaire de recherche il s'agit d'un arbre binaire dont chaque nœud du sous-arbre **gauche** ait une clé inférieure ou égale à celle du nœud considéré, et que chaque nœud du sous-arbre **droit** possède une clé supérieure ou égale à celle-ci trouver une valeur dans un arbre de recherche implique une complexité moyenne de $$ O(log(n))$$ et de $$ O(n)$$ dans un cas critique ou l'arbre est complètement **déséquilibré** et ressemble à une liste chaînée car il  dans ce cas il devras parcourir les *n* element *(cette complexité est la meme pour ce qui d'ajouter de nouveau element)*
+
 ![](Image/BinaryTree.jpg)
