@@ -67,7 +67,6 @@ public void ReversList()
 public MyLinkedListNode<T> SortMiddleList()
 {
     MyLinkedListNode<T> TmpList = Head;
-     Console.WriteLine($"count {Count / 2}");
 
     for (int i = 0; i < Count / 2; i++) {
         TmpList = TmpList.next;
@@ -97,5 +96,10 @@ un arbre binaire est arbre qui n'as que maximum 2 **noeud** enfant par **noeud**
 
 
 ![](Image/BinaryTree.jpg)
+
+
+- Pour implanter un Heap array il faut ajouter dans le tableaux d'abord les **Noeud** et après les **Noeud** enfant 
+
+
 
 ![](Image/ArrayTree.jpg)
