@@ -97,3 +97,5 @@ un arbre binaire est arbre qui n'as que maximum 2 **noeud** enfant par **noeud**
 
 
 ![](Image/BinaryTree.jpg)
+
+![](Image/ArrayTree.jpg)
