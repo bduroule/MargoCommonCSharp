@@ -103,3 +103,13 @@ un arbre binaire est arbre qui n'as que maximum 2 **noeud** enfant par **noeud**
 
 
 ![](Image/ArrayTree.jpg)
+
+## Matrice 
+
+$$
+\begin{pmatrix}
+1 & x & x^2 \\
+1 & y & y^2 \\
+1 & z & z^2 \\
+\end{pmatrix}
+$$
