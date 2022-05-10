@@ -104,7 +104,55 @@ un arbre binaire est arbre qui n'as que maximum 2 **noeud** enfant par **noeud**
 
 ![](Image/ArrayTree.jpg)
 
+## Les algorithmes de tri
+
+- le trie a bulle est un trie qui consiste a parcourir le tableau et compare les éléments consécutifs. Lorsque deux éléments consécutifs ne sont pas dans l'ordre, ils sont _permutés_, apres le premier parcoure l'element le plus grand est forcement a la fin on recommence donc le parcours en omettant le dernier element et on recommence jusqu'a avoir decremanter tout le tableau. La complexité de ce trie est de $$ O(n^2)$$ car on parcours _n_ fois les _n_ element du tableau.
+```cs
+public  void  bubbleSort()
+{
+	for (int  i  =  tab.Length;  i  >  0;  i--) {
+		for (int  j  =  0;  j  <  i  -  1;  j++) {
+			if (tab[j  +  1] <  tab[j]) {
+				int  tmp  =  tab[j  +  1];
+				tab[j  +  1] =  tab[j];
+				tab[j] =  tmp;
+			}
+		}
+	}
+}
+```
+
 ## Matrice 
+
+- Les Matrice sont le plus généralement représenter sous forme de tableau de tableau comme suit: 
+```
+[1, 2, 3, 4]
+[1, 0, 3, 4]
+[1, 2, 3, 4]
+[1, 2, 3, 0]
+``` 
+- Certaine matrice sont quasiment vide on parle alors de matrice creuse. Dans le cas cas d'une matrice dit creuse la majoriter des element de cette dernier sont egale a 0
+- Pour représenter une matrice creuse on peut utiliser le format Yale Sparse Matrix qui consiste a stocker la matrice dans 3 tableau unidimensionnelle `A`, `IA`, et `JA` en considerant _n_ comme le nombre des entrer non null de la matrice _M_ : 
+ 
+	 - `A`  et est de longueur _n_. Il contient toutes les valeurs des entrées non nulles de _M_ de gauche à droite et de haut en bas
+	 - `AI` est de longueur _m + 1_ Il est défini de façon récursive telle que: _AI(0) = 0_ et _AI(i + 1) = AI(i) + n i_ ou _n i_ est le nombre d'entrer non null de la ligne courante.
+	 - `JA` est de longueur _n_ contient le numéro de la colonne de chaque élément de `A`
+	
+- pour fair la somme de tout les element d'une matrice il faut parcourir tous les element de cette dernier et de les additionné
+
+```cs
+public int MatrixSum(int[][] matrix)
+{
+	int res = 0;
+	foreach (var line in matrix) {
+		foreach (var elem in line) {
+			res += elem;
+		}
+	}
+	return res;
+}
+```
+pour une matrice creuse i suffit de fair la somme des element du tableau `A` 
 
 $$
 \begin{pmatrix}
