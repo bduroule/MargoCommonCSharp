@@ -27,3 +27,11 @@ Quelle est sa complexité ?
 - Quand peut-on dire qu’un arbre est parfaitement équilibré ?
 - Implémenter les classes «BinarySearchTree» et «Node» associées.
 - Quelle structure de donnée est implémentée en utilisant les arbres binaires (dans le langage de votre choix) ?
+
+## La programmation orientée object
+
+### bases
+
+- Quels sont les principes de la programmation orientée objet ?
+- Quelle différence entre un héritage simple et multiple ?
+- Qu’est-ce qu’un membre protégé ? privé ? public ?
