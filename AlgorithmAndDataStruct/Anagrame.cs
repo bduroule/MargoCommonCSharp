@@ -1,5 +1,5 @@
 ﻿namespace AlgorithmAndDataStruct;
-public class Class1
+public class Anagram
 {
     public static bool AreAnagrams(string s1, string s2)
     {
