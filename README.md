@@ -2,7 +2,7 @@
 
 ## L’algorithmique et les structures de données
 
-### Les listes chaînées et les tableaux
+### Les listes chaînées
 
 - Représenter schématiquement une liste chaînée d’entiers.
 - Implémenter la classe “LinkedList” et “Node” associée (la liste est simplement chaînée).
@@ -12,13 +12,13 @@
  -  Supprimer un élément
  -  Inverser une liste chaînée sans ré-allocation de mémoire
 
-# Les tableaux
+### Les tableaux
 
 - Quelle est la principale différence entre un tableau et une liste ?
 - Quelles méthodes connaissez-vous pour trier un tableau ? Quelle est la plus rapide?
 Quelle est sa complexité ?
 
-# Les arbres binaires
+### Les arbres binaires
 
 - Donner la définition d’un arbre, d’un arbre binaire, d’un arbre binaire de recherche.
 - Comment implémenter un heap (array) ?
