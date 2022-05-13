@@ -121,3 +121,17 @@ ont peut voir dans cette nouvelle version qu'ont ne regarde plus si la propriét
 
 ### Decorateur
 
+Le decorateur ou _"embaleur"_ est un design pattern qui fait parti de la famille des paterne de structure  **_gang of four_**
+
+ ![](Image/Decorator.jpg) 
+
+on peut voir une interface `DataSource` qui définit un contrat d'implémenter `readData` et `writeData`. [...]
+
+## Le Multithreading
+
+### Thread / Processus 
+
+Un  processus est programme en cour d'éxécution c'est lui qui execute les instruction du programme, il a également un espace d'adressage en mémoire vive (sur la RAM) pour contenir la hype alors qu'un thread est un segment d'un processus. Un processus peut avoir de nombreux thread et tous ces thread sont stocker dans le processus.
+
+### Tread / Task
+
