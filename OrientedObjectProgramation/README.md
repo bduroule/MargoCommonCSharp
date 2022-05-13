@@ -123,7 +123,7 @@ ont peut voir dans cette nouvelle version qu'ont ne regarde plus si la propriét
 
 Le decorateur ou _"embaleur"_ est un design pattern qui fait parti de la famille des paterne de structure  **_gang of four_**
 
- ![](Image/Decorator.jpg) 
+ ![](Image/decorator.jpg) 
 
 on peut voir une interface `DataSource` qui définit un contrat d'implémenter `readData` et `writeData`. [...]
 
