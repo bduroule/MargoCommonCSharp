@@ -125,7 +125,37 @@ Le decorateur ou _"embaleur"_ est un design pattern qui fait parti de la famille
 
  ![](Image/decorator.jpg) 
 
-on peut voir une interface `DataSource` qui définit un contrat d'implémenter `readData` et `writeData`. [...]
+on peut voir une interface `DataSource` qui définit un contrat d'implémenter `readData` et `writeData`. Elle est Utiliser par `FileDataSource` et `DataSourceDecorator`, et pour étendre `FileDataSource` au lieu d'implémenter de nouvelle méthode dans cette dernière nous allons utiliser des décorateur par le billais de `DataSourceDecorator`, un qui compresse des donnée et un qui encrypte ces dernière.
+
+### MVC
+
+**MVC** ou **Modèle-Vue-Contrôleur** est un design pattern architectural qui a pour but de séparer les différents aspect d'une application, dans ce cas en 3 couche:
+
+- Le **Modele** représente les donnée de l'application, leur traitement ainssi que la relation avec la base de donnée
+- la **Vue** représente l'interface utilisateur elle n'effectue pas de traitement, elle affiche juste les donnée envoyer par le modèle
+- le **Contrôleur** gère l'interface entre le la vue et le modèle Il va interpréter la requête de ce dernier pour lui envoyer la vue correspondante 
+
+![](Image/mvc.jpg) 
+
+### MVP
+
+**MVP** ou **Model View Présenter** est un pattern architectural comme MVC a la différence que le view ne comunique pas directement avec le model. il est découper en 3 couche comme MVC qui sont :
+
+- Le **Modele** représente les donnée de l'application, leur traitement ainssi que la relation avec la base de donnée
+- la **Vue** représente l'interface utilisateur elle n'effectue pas de traitement, elle affiche juste les donnée envoyer par le modèle
+- Le **Présentateur** récupérer les donner du modèle est applique la logique de l'interface utilisateur pour définir ce qu'il faut afficher.
+
+![](Image/mvp.jpg) 
+
+### MVVM
+
+Le **modèle-vue-vue modèle** ou **MVVM** est un pattern architectural drivée de **MVC**  il est découpée en 3 couche comme suit :
+
+- Le **Modele** représente les donnée de l'application, leur traitement ainssi que la relation avec la base de donnée
+- la **Vue** représente l'interface utilisateur elle n'effectue pas de traitement, elle affiche juste les donnée envoyer par le modèle
+- Le **View Model** fait le lien entre le model et la vue, il s'occupe de lier les donnée et eventuelement gérer des conversion.
+
+![](Image/mvvm.jpg) 
 
 ## Le Multithreading
 
