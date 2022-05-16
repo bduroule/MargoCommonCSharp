@@ -165,3 +165,20 @@ Un  processus est programme en cour d'éxécution c'est lui qui execute les inst
 
 ### Tread / Task
 
+`Task`  est une class de c# qui permet de créer une tache qui sera executer de manière asynchrone, contrairement a thread, task ne crée pas de nouveau thread mais vas chercher dans thread pull. Task peu  également dire si il a fini ca tache et retourner une valeur.
+
+`Thread` est une class qui vas prendre en charge un bloque d'instruction et l'executer a coter de la tram principe du programme, il a sa propre zone mémoire (stack la hype et commune a tous les thread du processus).
+
+### synchrone asynchrone
+
+Une méthode synchrone est une méthode qui vas executer des instruction les une après les autre, la ou la méthode asynchrone les executeras tout en meme temps si on ne spécifie pas d'attendre que instruction ou un bloque d'instruction soit executer.
+
+### Section critique 
+
+Une section critique est une portion de code ou il ne peu y avoir plus un thread simultanément. On peut s'assurer de ça en utilisant des mutex qui est une class qui permet de synchronisé l’accès à une ressource protégée  en interdisant l'accès à celle-ci par tout les autre thread. 
+
+### Deadlock
+
+Le Deadlock ou interblocage est la situation dans laquelle 2 threads s’attendent mutuellement,
+
+
