@@ -71,4 +71,28 @@ Le principe d’inversion des dépendances précise :
 
 ## TDD
 
-TDD ou Test Driven Development est une pratique qui consiste a déveuloper les test avant le d'écrire le code ce qui veut dire qu'on vas d'abord établir le comportement et les retour attendu du code avant de l'implémanter.
+TDD ou Test Driven Développement est une pratique qui consiste a déveuloper les test avant le d'écrire le code ce qui veut dire qu'on vas d'abord établir le comportement et les retour attendu du code avant de l'implémanter. L'un des avantages des ces test est qu'il peuvent servire de documentation. Le deveulopement ce fait sur plusieurs iteration, chaque itération ce fait sur 3 etape
+
+- **red** test corespondand au resultat attendu
+- **green** code de production passent le test
+- **refactor** factorise le code sans ajouter ou modifier le comportement
+
+Uncle Bob du TDD évoque trois règle :
+
+- écrire un test qui échoue avant n'importe qu'elle code de production 
+- ne pas écrire plus de teste que necéssaire pour faire échouer ou ne pas compiler
+- écrire que le code suffisant pour faire reussire les teste
+
+## BDD
+
+**BDD** ou **behaviour-driven development**  (_programmation pilotée par le comportement_), il a pour but de faire colaborer les développeur et le méier (_product owner_) pour maximiser le logiciel, ca ce fait par la conversation entre justement les développeur, les PO, et les QA (tester) pour essayer de clarifier au mieux le besoin. Pour ce faire on vas fonctionner par exemple ces exemple seront dicter a l'orale mais aussi a l'écrit, on redige alors des senario, qu'on ecrit en gerkin (un language semi naturel), les senario doivent etre bref et doivent utiliser le vocabulaire du metier pour etre au plus pres de la demande, lorsque les senario sont définit on peut, si besoin metre en place le troisième pilier du **BDD** a savoir: 'lautomatisation.
+
+## DDD
+ 
+DDD ou Domain Driven Design n'est pas une méthodologie comme TDD ou BDD mais plutôt une approche dériver du blue book qui a pour but de controler la complexité, on peut observer 3 grand principe dans le DDD qui sont :
+
+- la compréhension du domaine, avoir une vision commune avec les expert du métier
+- la tactique qui consiste a avoir une implémantation au plus prés de l'image mantal qu'on c'est fait.
+- la strategie qui consiste a decouper les domaine en sous domaine eu-même découpé et a definir ces sous domaine aussi que leur relation entre eux
+
+le pattern du DDD est donc de travailler en micro-service connecter les un au autre.
