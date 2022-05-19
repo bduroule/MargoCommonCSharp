@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v6.0": {
       "AppConsole/1.0.0": {
         "dependencies": {
-          "AlgorithmAndDataStruct": "1.0.0"
+          "AlgorithmAndDataStruct": "1.0.0",
+          "OrientedObjectProgramation": "1.0.0"
         },
         "runtime": {
           "AppConsole.dll": {}
@@ -17,6 +18,11 @@
       "AlgorithmAndDataStruct/1.0.0": {
         "runtime": {
           "AlgorithmAndDataStruct.dll": {}
+        }
+      },
+      "OrientedObjectProgramation/1.0.0": {
+        "runtime": {
+          "OrientedObjectProgramation.dll": {}
         }
       }
     }
@@ -28,6 +34,11 @@
       "sha512": ""
     },
     "AlgorithmAndDataStruct/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OrientedObjectProgramation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

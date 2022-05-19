@@ -1,0 +1,12 @@
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/obj/Debug/net6.0/OrientedObjectProgramation.csproj.AssemblyReference.cache
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/obj/Debug/net6.0/OrientedObjectProgramation.GeneratedMSBuildEditorConfig.editorconfig
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/obj/Debug/net6.0/OrientedObjectProgramation.AssemblyInfoInputs.cache
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/obj/Debug/net6.0/OrientedObjectProgramation.AssemblyInfo.cs
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/obj/Debug/net6.0/OrientedObjectProgramation.csproj.CoreCompileInputs.cache
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/bin/Debug/net6.0/OrientedObjectProgramation.deps.json
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/bin/Debug/net6.0/OrientedObjectProgramation.dll
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/bin/Debug/net6.0/OrientedObjectProgramation.pdb
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/obj/Debug/net6.0/OrientedObjectProgramation.dll
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/obj/Debug/net6.0/refint/OrientedObjectProgramation.dll
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/obj/Debug/net6.0/OrientedObjectProgramation.pdb
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/obj/Debug/net6.0/ref/OrientedObjectProgramation.dll

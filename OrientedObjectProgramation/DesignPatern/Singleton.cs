@@ -13,13 +13,13 @@ public sealed class SingletonNotLazy<R> {
     SingletonNotLazy() {}  
 
     private static readonly object lockObj = new object();  
-    private static R instance = null;  
+    private static R instance = default(R);  
     public static R Instance {  
         get {  
             lock(lockObj) {  
                 if (instance == null) {  
-                    instance = new R();  
-                }  
+                    // instance = new R();  
+                }
                 return instance;  
             }  
         }  
@@ -37,7 +37,7 @@ public sealed class Singleton<R> where R: new()
         get    
         {
             return lazy.Value;    
-        }    
+        }
     }
 }
 

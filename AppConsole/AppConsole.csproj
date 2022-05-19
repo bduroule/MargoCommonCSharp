@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AlgorithmAndDataStruct\AlgorithmAndDataStruct.csproj" />
+    <ProjectReference Include="..\OrientedObjectProgramation\OrientedObjectProgramation.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

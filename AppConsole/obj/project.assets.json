@@ -11,6 +11,16 @@
         "runtime": {
           "bin/placeholder/AlgorithmAndDataStruct.dll": {}
         }
+      },
+      "OrientedObjectProgramation/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/OrientedObjectProgramation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OrientedObjectProgramation.dll": {}
+        }
       }
     }
   },
@@ -19,11 +29,17 @@
       "type": "project",
       "path": "../AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj",
       "msbuildProject": "../AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj"
+    },
+    "OrientedObjectProgramation/1.0.0": {
+      "type": "project",
+      "path": "../OrientedObjectProgramation/OrientedObjectProgramation.csproj",
+      "msbuildProject": "../OrientedObjectProgramation/OrientedObjectProgramation.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "AlgorithmAndDataStruct >= 1.0.0"
+      "AlgorithmAndDataStruct >= 1.0.0",
+      "OrientedObjectProgramation >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -53,6 +69,9 @@
           "projectReferences": {
             "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj": {
               "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj"
+            },
+            "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/OrientedObjectProgramation.csproj": {
+              "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/OrientedObjectProgramation.csproj"
             }
           }
         }
