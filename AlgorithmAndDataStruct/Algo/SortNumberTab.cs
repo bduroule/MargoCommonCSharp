@@ -1,25 +1,9 @@
 
 
-namespace AlgorithmAndDataStruct
-{
-    public class SortNumberTab
-    {
-        public int[] tab { get; set; }
+namespace AlgorithmAndDataStruct;
 
-        public SortNumberTab(int[] tab) {
-            this.tab = tab;
-        }
-
-        public int[] MergerSort(int[] array)
-        {
-            if (array.Length <= 1)
-                return array;
-            
-            return new int[0];
-        }
-
-        public static class MergeTabInt
-{
+static public  class SortNumberTab
+{ 
     public static int[] Merge(int[] tabA, int[] tabB)
     {
         int indexA = 0;
@@ -43,18 +27,68 @@ namespace AlgorithmAndDataStruct
         }
         return result;
     }
-}
-        public void bubbleSort()
-        {
-            for (int i = tab.Length; i > 0; i--) {
-                for (int j = 0; j < i - 1; j++) {
-                    if (tab[j + 1] < tab[j]) {
-                        int tmp = tab[j + 1];
-                        tab[j + 1] = tab[j];
-                        tab[j] = tmp;
-                    }
+
+    static public int[] bubbleSort(int[] tab)
+    {
+        for (int i = tab.Length; i > 0; i--) {
+            for (int j = 0; j < i - 1; j++) {
+                if (tab[j + 1] < tab[j]) {
+                    int tmp = tab[j + 1];
+                    tab[j + 1] = tab[j];
+                    tab[j] = tmp;
                 }
             }
         }
+        return tab;
     }
+
+
+
+// for each (unsorted) partition
+// set first element as pivot
+//   storeIndex = pivotIndex+1
+//   for i = pivotIndex+1 to rightmostIndex
+//     if ((a[i] < a[pivot]) or (equal but 50% lucky))
+//       swap(i, storeIndex); ++storeIndex
+//   swap(pivot, storeIndex-1)
+
+    static private void swap(int[] array, int i, int j)
+    {
+        int tmp = array[i];
+        array[i] = array[j];
+        array[j] = tmp;
+    }
+
+    public static int[] QuickSort(int[] array, int leftIndex, int rightIndex)
+    {
+        var i = leftIndex;
+        var j = rightIndex;
+        var pivot = array[leftIndex];
+        while (i <= j)
+        {
+            while (array[i] < pivot)
+            {
+                i++;
+            }
+        
+            while (array[j] > pivot)
+            {
+                j--;
+            }
+            if (i <= j)
+            {
+                swap(array, i, j);
+                i++;
+                j--;
+            }
+        }
+    
+        if (leftIndex < j)
+            QuickSort(array, leftIndex, j);
+        if (i < rightIndex)
+            QuickSort(array, i, rightIndex);
+        return array;
+    }
+    
 }
+

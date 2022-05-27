@@ -1,5 +1,4 @@
 ﻿using AlgorithmAndDataStruct;
-using AlgorithmAndDataStruct;
 using OrientedObjectProgramation;
 using System;
 
@@ -7,6 +6,15 @@ namespace AppConsole
 {
     class Program
     {
+
+        static void mapTree(BinaryTreeNode<int> root, string str)
+        {
+            Console.WriteLine($"    node = {root.Value} string {str}");
+            if (root.left != null)
+                mapTree(root.left, "left");
+            if (root.reight != null)
+                mapTree(root.reight, "reight");
+        }
         static void Main(string[] args)
         {
             // MyLinkedList<int> testList = new MyLinkedList<int>() {1, 1, 2, 4, 6, 7, 9};
@@ -34,16 +42,34 @@ namespace AppConsole
             // Console.WriteLine();
             // Console.WriteLine($"Hello W {testList.SortMiddleList().item}");
             // Console.WriteLine();
-            // SortNumberTab sortNumberTab = new SortNumberTab(new int[] {2, 4, 1, 8, 4, 6, 3, 22, 64, 10, 44, 56});
-            // sortNumberTab.bubbleSort();
+            int[] array = new int[] {2, 4, 1, 8, 4, 6, 3, 22, 64, 10, 44, 56};
+            SortNumberTab.QuickSort(array, 0, array.Length - 1);
 
-            // foreach (var elem in sortNumberTab.tab) {
-            //     Console.Write($"{elem}, ");
-            // }
-            // Console.WriteLine();
+            foreach (var elem in array) {
+                Console.Write($"{elem}, ");
+            }
+            Console.WriteLine();
 
             MultithreadingProductConsumer testTread = new MultithreadingProductConsumer();
-            testTread.ProductConsumer();
+            LinkedList<int> list = new LinkedList<int>(new int[] {2, 4, 6, 7, 8, 10, 11, 12});
+            LinkedListNode<int> node = list.First;
+             
+            BinarySearchTree<int> tree = new BinarySearchTree<int>(new int[] {2, 4, 6, 7, 8, 10, 11, 12});
+            SetOfSet.result3(4, 3);
+            // tree.Add(7);
+            // tree.Add(4);
+            // tree.Add(2);
+            // tree.Add(6);
+            // tree.Add(11);
+            // tree.Add(9);
+            // tree.Add(12);
+            // tree.Add(8);
+            // tree.Add(10);
+            // mapTree(tree.root, "root");
+            // Console.WriteLine($"Max = {tree.MaxHeight()}");
+            // BinaryTreeNode<int> test = tree.ClosestAncestor(tree.Search(8), tree.Search(12));
+            // Console.WriteLine($"ancetor {test.Value}");
+            // testTread.ProductConsumer();
         }
     }
 }

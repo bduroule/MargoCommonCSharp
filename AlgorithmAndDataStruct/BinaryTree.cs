@@ -1,13 +1,13 @@
 
 namespace AlgorithmAndDataStruct;
 
-public class BinaryTreeNode
+public class BinaryTreeNode<T> where T : IComparable 
 {
-    public BinaryTreeNode(int value)
+    public BinaryTreeNode(T value)
     {
         this.Value = value;
     }
-    public int Value { get; set; }
-    public BinaryTreeNode left { get; set; }
-    public BinaryTreeNode reight { get; set; }
+    public T Value { get; set; }
+    public BinaryTreeNode<T> left { get; set; }
+    public BinaryTreeNode<T> reight { get; set; }
 }

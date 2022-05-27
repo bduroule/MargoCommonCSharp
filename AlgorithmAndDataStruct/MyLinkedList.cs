@@ -87,7 +87,7 @@ namespace AlgorithmAndDataStruct
         }
 
         // TODO methode parcourire reverse + use Last
-        public async void PrintList()
+        public void PrintList()
         {
             MyLinkedListNode<T> _head = Head;
             while (_head != null) {

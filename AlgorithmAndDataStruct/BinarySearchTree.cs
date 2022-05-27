@@ -1,30 +1,54 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace AlgorithmAndDataStruct;
 
-public class BinarySearchTree
+public class BinarySearchTree<T> where T : IComparable
 {
-    private BinaryTreeNode root { get; set; }
+    public BinaryTreeNode<T> root { get; set; }
 
-    private void SearchAndInsertValue(BinaryTreeNode node, int value)
+    public BinarySearchTree(T[] array)
     {
-        if (node.Value < value && node.left != null)
+        this.root = ArraySortedToTree(array, 0, array.Length);
+    }
+
+
+    private BinaryTreeNode<T> ArraySortedToTree(T[] array, int Start, int End)
+    {
+        if (Start > End || (Start + End) / 2 >= array.Length)
+            return null;
+
+        int middle = (Start + End) / 2;
+
+        BinaryTreeNode<T> node = new BinaryTreeNode<T>(array[middle]);
+
+        node.left = ArraySortedToTree(array, Start, middle - 1);
+        node.reight =  ArraySortedToTree(array, middle + 1, End);
+
+        return node;
+    }
+
+    private void SearchAndInsertValue(BinaryTreeNode<T> node, T value)
+    {
+        if (node.Value.CompareTo(value) > 0 && node.left != null)
             SearchAndInsertValue(node.left, value);
-        else if (node.Value < value && node.left == null)
-            node.left = new BinaryTreeNode(value);
-        else if (node.Value > value && node.reight != null)
+        else if (node.Value.CompareTo(value) > 0 && node.left == null) 
+            node.left = new BinaryTreeNode<T>(value);
+        else if (node.Value.CompareTo(value) < 0 && node.reight != null)
             SearchAndInsertValue(node.reight, value);
-        else if (node.Value > value && node.reight == null)
-            node.reight = new BinaryTreeNode(value);
+        else if (node.Value.CompareTo(value) < 0 && node.reight == null) 
+            node.reight = new BinaryTreeNode<T>(value);
         else 
             throw new ArgumentException($"this item as already been added: Value: {value}");
     }
 
-    public void Add(int Value)
+    public void Add(T Value)
     {
-        if (root == null)
-            root = new BinaryTreeNode(Value);
+        if (root == null) {
+            root ??= new BinaryTreeNode<T>(Value);
+            return ;
+        }
         try {
             SearchAndInsertValue(root, Value);
         }
@@ -33,21 +57,49 @@ public class BinarySearchTree
         }
     }
 
-    private BinaryTreeNode SearchClosestAncestor(BinaryTreeNode root, BinaryTreeNode n1, BinaryTreeNode n2)
+    private BinaryTreeNode<T> SearchAndReturnElement(BinaryTreeNode<T> node, T value)
+    {
+        if (node.Value.CompareTo(value) > 0 && node.left != null)
+            return SearchAndReturnElement(node.left, value);
+        else if (node.Value.CompareTo(value) < 0 && node.reight != null)
+            return SearchAndReturnElement(node.reight, value);
+        return node.Value.CompareTo(value) == 0 ? node : null; 
+    }
+
+    public BinaryTreeNode<T> Search(T value)
+    {
+        return SearchAndReturnElement(root, value);
+    }
+
+    private BinaryTreeNode<T> SearchClosestAncestor(BinaryTreeNode<T> root, BinaryTreeNode<T> n1, BinaryTreeNode<T> n2)
     {
         if (root == null || n1 == root || n2 == root)
             return root;
-        BinaryTreeNode left = SearchClosestAncestor(root.left, n1, n2);
-        BinaryTreeNode reight = SearchClosestAncestor(root.reight, n1, n2);
+        BinaryTreeNode<T> left = SearchClosestAncestor(root.left, n1, n2);
+        BinaryTreeNode<T> reight = SearchClosestAncestor(root.reight, n1, n2);
         if (left != null && reight != null)
             return root;
-        return left != null ? left : reight;
+        return left ?? reight;
     }
 
-    public int ClosestAncestor(BinaryTreeNode n1, BinaryTreeNode n2)
+    public BinaryTreeNode<T> ClosestAncestor(BinaryTreeNode<T> n1, BinaryTreeNode<T> n2)
     {
         if (n1 == null || n2 == null)
             throw new NullReferenceException("the node n1 ou n2 est null");
-        return SearchClosestAncestor(root, n1, n2).Value;
+        return SearchClosestAncestor(root, n1, n2);
+    }
+
+    public int CalculateMaxHeight(BinaryTreeNode<T> node, int n)
+    {
+        if (node == null)
+            return n - 1;
+        int left = CalculateMaxHeight(node.left, n + 1);
+        int reight = CalculateMaxHeight(node.reight, n + 1);
+        return left > reight ? left : reight;
+    }
+
+    public int MaxHeight()
+    {
+        return CalculateMaxHeight(root, 0);
     }
 }
