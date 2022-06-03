@@ -12,6 +12,16 @@
           "bin/placeholder/AlgorithmAndDataStruct.dll": {}
         }
       },
+      "Kata/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Kata.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Kata.dll": {}
+        }
+      },
       "OrientedObjectProgramation/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -30,6 +40,11 @@
       "path": "../AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj",
       "msbuildProject": "../AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj"
     },
+    "Kata/1.0.0": {
+      "type": "project",
+      "path": "../Kata/Kata.csproj",
+      "msbuildProject": "../Kata/Kata.csproj"
+    },
     "OrientedObjectProgramation/1.0.0": {
       "type": "project",
       "path": "../OrientedObjectProgramation/OrientedObjectProgramation.csproj",
@@ -39,6 +54,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "AlgorithmAndDataStruct >= 1.0.0",
+      "Kata >= 1.0.0",
       "OrientedObjectProgramation >= 1.0.0"
     ]
   },
@@ -69,6 +85,9 @@
           "projectReferences": {
             "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj": {
               "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj"
+            },
+            "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/Kata/Kata.csproj": {
+              "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/Kata/Kata.csproj"
             },
             "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/OrientedObjectProgramation.csproj": {
               "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/OrientedObjectProgramation.csproj"

@@ -1,4 +1,5 @@
-
+using System;
+using System .Collections;
 
 namespace AlgorithmAndDataStruct;
 
@@ -42,6 +43,33 @@ static public  class SortNumberTab
         return tab;
     }
 
+
+    public static int MaxProfit(int[] prices) {
+        int result = 0;
+        int lastProfilt = -1;
+        int tmpResult = 0;
+        int tmpIndex = -1;
+        
+        for (int i = 0; i < prices.Length; i++) {
+            for (int j = i; j < prices.Length; j++) {
+                if (prices[j] - prices[i] > 0 && tmpResult < (prices[j] - prices[i])) {
+                    tmpResult = prices[j] - prices[i];
+                    Console.WriteLine($"i {prices[i]}; j {prices[j]}; res {tmpResult}");
+                }
+            }
+            if (tmpResult > lastProfilt && lastProfilt != -1) {
+                Console.WriteLine($" IN tmpResult {tmpResult} | lastProfilt {lastProfilt} | result {result}");
+                result -= lastProfilt;
+                result += tmpResult;
+                Console.WriteLine($" OUT tmpResult {tmpResult} | lastProfilt {lastProfilt} | result {result}");
+            } else
+                result += tmpResult;
+            lastProfilt = tmpResult;
+            Console.WriteLine($"last {lastProfilt}");
+            tmpResult = 0;
+        }
+        return result;
+    }
 
 
 // for each (unsorted) partition
@@ -88,6 +116,24 @@ static public  class SortNumberTab
         if (i < rightIndex)
             QuickSort(array, i, rightIndex);
         return array;
+    }
+
+    public static string MoreLonger(ArrayList array)
+    {
+        int tmp = -1;
+        string tmpStr = null;
+        string result = null;
+
+        for (int i = 0; i < array.Count; i++) {
+            if (array[i] is string) {
+                tmpStr = array[i] as string;
+                if (tmpStr.Length > tmp) {
+                    tmp = tmpStr.Length;
+                    result = tmpStr;
+                }
+            }
+        }
+        return result;
     }
     
 }

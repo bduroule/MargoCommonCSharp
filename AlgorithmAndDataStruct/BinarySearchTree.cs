@@ -102,4 +102,31 @@ public class BinarySearchTree<T> where T : IComparable
     {
         return CalculateMaxHeight(root, 0);
     }
+
+//     class Tree{
+// 	int current;
+//   Tree left;
+//   Tree right;
+  
+//   bool IsBinaryResearch(){
+//   	return IsBinaryResearchRecursive(this, int.Max, int.Min);
+//   }
+  
+//   private static bool IsBinaryResearchRecursive(Tree root, int max, min){
+//   bool left = true;
+//   bool right = true;
+  
+//   	if (root.left != null) {
+//     	if (root.left.current < root.curent)
+//   			left = IsBinaryResearchRecursive(root.left, max, root.Current);
+//       else
+//       	return false;
+//       }
+//     if (root.reight != null)
+//     	if (root.right.current > root.curent)
+//  		 		right = IsBinaryResearchRecursive(root.right);
+//     	else
+//       	return false;
+// 		return left && right;
+//   }
 }

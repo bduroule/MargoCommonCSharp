@@ -18,3 +18,5 @@
 /Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AppConsole/obj/Debug/net6.0/AppConsole.csproj.CopyComplete
 /Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AppConsole/bin/Debug/net6.0/OrientedObjectProgramation.dll
 /Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AppConsole/bin/Debug/net6.0/OrientedObjectProgramation.pdb
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AppConsole/bin/Debug/net6.0/Kata.dll
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AppConsole/bin/Debug/net6.0/Kata.pdb

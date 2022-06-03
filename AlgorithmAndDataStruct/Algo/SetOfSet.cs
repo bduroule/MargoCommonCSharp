@@ -59,3 +59,42 @@ public static class SetOfSet
     }
 
 }
+
+// List<int> {1, 2, 3, ..., n} , int k => all substes of size k
+// {1, 2}, k = 2          =>  {1, 2}
+// {1, 2 , 3}, k = 2      =>  {1, 2}, {1, 3}, {2, 3}
+// {1, 2, 3, 4}, k = 2    =>  {1, 2}, {1, 3}, {1, 4}, {2, 3}, {2, 4}, {3, 4}
+// {1, 2, 3, 4, 5}, k = 2
+
+// public List<List<int>> Soulist(int n, int k)
+// {
+// 	if (n < k)
+//   	return null;
+//   if (k == 1) {
+//   	var resultK1 = new List<List<int>>();
+//     for (int i = 1; i < n; i++) {
+//     	resultK1.Add(new List<int> {i});
+//     }
+//   	return resultK1;
+//   }
+//   if (n == k){ 
+//   	var currentResult = new List<int>();
+//   	for (int i = 1; i <= k; i++){
+//     	currentResult.Add(i);
+//     }
+//     return new List<List<int>>{currentResult};
+//   }
+  	
+// 	var result = new List<List<int>>();
+  
+// 	List<List<int>> partialResult = SouList(n - 1, k);
+  
+//   // 
+  
+//   foreach(List<int> subList in partialResult){
+//   	result.Add(subList);
+//   }
+  
+  
+//   return result;
+// }

@@ -3,6 +3,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AlgorithmAndDataStruct\AlgorithmAndDataStruct.csproj" />
     <ProjectReference Include="..\OrientedObjectProgramation\OrientedObjectProgramation.csproj" />
+    <ProjectReference Include="..\Kata\Kata.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

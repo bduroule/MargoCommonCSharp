@@ -4,14 +4,14 @@
     "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStructTest/AlgorithmAndDataStructTest.csproj": {}
   },
   "projects": {
-    "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStructTest/AlgorithmAndDataStructTest.csproj": {
+    "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStructTest/AlgorithmAndDataStructTest.csproj",
-        "projectName": "AlgorithmAndDataStructTest",
-        "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStructTest/AlgorithmAndDataStructTest.csproj",
+        "projectUniqueName": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj",
+        "projectName": "AlgorithmAndDataStruct",
+        "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj",
         "packagesPath": "/Users/beduroule/.nuget/packages/",
-        "outputPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStructTest/obj/",
+        "outputPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/beduroule/.nuget/NuGet/NuGet.Config"
@@ -37,6 +37,76 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStructTest/AlgorithmAndDataStructTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStructTest/AlgorithmAndDataStructTest.csproj",
+        "projectName": "AlgorithmAndDataStructTest",
+        "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStructTest/AlgorithmAndDataStructTest.csproj",
+        "packagesPath": "/Users/beduroule/.nuget/packages/",
+        "outputPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStructTest/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/beduroule/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj": {
+                "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.1.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.2, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

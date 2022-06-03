@@ -9,6 +9,7 @@
       "AppConsole/1.0.0": {
         "dependencies": {
           "AlgorithmAndDataStruct": "1.0.0",
+          "Kata": "1.0.0",
           "OrientedObjectProgramation": "1.0.0"
         },
         "runtime": {
@@ -18,6 +19,11 @@
       "AlgorithmAndDataStruct/1.0.0": {
         "runtime": {
           "AlgorithmAndDataStruct.dll": {}
+        }
+      },
+      "Kata/1.0.0": {
+        "runtime": {
+          "Kata.dll": {}
         }
       },
       "OrientedObjectProgramation/1.0.0": {
@@ -34,6 +40,11 @@
       "sha512": ""
     },
     "AlgorithmAndDataStruct/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Kata/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
