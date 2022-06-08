@@ -9,6 +9,7 @@
       "AlgorithmAndDataStructTest/1.0.0": {
         "dependencies": {
           "AlgorithmAndDataStruct": "1.0.0",
+          "Kata": "1.0.0",
           "Microsoft.NET.Test.Sdk": "17.1.0",
           "NUnit": "3.13.2",
           "NUnit3TestAdapter": "4.0.0"
@@ -653,6 +654,11 @@
         "runtime": {
           "AlgorithmAndDataStruct.dll": {}
         }
+      },
+      "Kata/1.0.0": {
+        "runtime": {
+          "Kata.dll": {}
+        }
       }
     }
   },
@@ -978,6 +984,11 @@
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
     },
     "AlgorithmAndDataStruct/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Kata/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

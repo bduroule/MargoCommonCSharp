@@ -124,7 +124,7 @@ public class BinarySearchTree<T> where T : IComparable
 //       }
 //     if (root.reight != null)
 //     	if (root.right.current > root.curent)
-//  		 		right = IsBinaryResearchRecursive(root.right);
+//  		 right = IsBinaryResearchRecursive(root.right);
 //     	else
 //       	return false;
 // 		return left && right;

@@ -98,3 +98,5 @@
 /Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStructTest/obj/Debug/net6.0/AlgorithmAndDataStructTest.pdb
 /Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStructTest/obj/Debug/net6.0/AlgorithmAndDataStructTest.genruntimeconfig.cache
 /Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStructTest/obj/Debug/net6.0/ref/AlgorithmAndDataStructTest.dll
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStructTest/bin/Debug/net6.0/Kata.dll
+/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStructTest/bin/Debug/net6.0/Kata.pdb

@@ -7,6 +7,10 @@
     <ProjectReference Include="..\AlgorithmAndDataStruct\AlgorithmAndDataStruct.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Kata\Kata.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>

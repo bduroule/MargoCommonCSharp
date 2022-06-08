@@ -121,9 +121,19 @@ namespace AppConsole
             string AccNumber = bank.ConvertFileToNumber(numbers);
             string key = "!)\"(£*%&><@abcdefghijklmno";
             string resCode = CodeCracker.Decrypte(")dc<djgh a£!", key);
+            dynamic testDim = "coucou";
+            Console.WriteLine($"test 1 dim = {testDim}");
+            testDim = 4;
+            Console.WriteLine($"test 2 dim = {testDim}");
+
 
             Console.WriteLine($"bank =          {AccNumber} | {bank.IsValidAccountNumber("345882865")}\n\t{bank.DefineStatusCode("3458?2865")}\n\t{bank.DefineStatusCode(AccNumber)}\n\t{bank.DefineStatusCode("345882865")}");
             Console.WriteLine($"CodeCracker     {resCode} | {CodeCracker.Encrypte(resCode, key)}");
+            Dictionary<string, string> dictionary = new Dictionary<string, string>();
+            dictionary.Add("jejej", "jes suis un");
+            dictionary.Add("quiFaitDesTruc", "je suis deux"); var a = "coucou $jejej$ sui un lapin $quiFaitDesTruc$ ui";
+            var ui = DictionaryReplacer.Replacer("$jejej$$quiFaitDesTruc$", dictionary);
+            Console.WriteLine($" result replacer = |{ui}|");
         }
     }
 }
