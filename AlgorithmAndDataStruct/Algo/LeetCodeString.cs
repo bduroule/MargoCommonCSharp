@@ -118,4 +118,44 @@ public static class LeetCodeString
         strs[0].CopyTo(0, result, 0, maxIndex + 1);
         return new string(result);
     }
+
+    public static int MyAtoi(this string s)
+    {
+        bool IsNeg = s.Contains('-');
+        s = s.ToLower();
+        int res = 0;
+        
+        for (int i = 0; i < s.Length; i++) {
+            int number = (int)Char.GetNumericValue(s[i]);
+            if (!Char.IsDigit(s[i]))
+                continue ;
+            if (res > int.MaxValue / 10 || (res == int.MaxValue / 10 && int.MaxValue % 10 == number))
+                return IsNeg ? -int.MaxValue - 1 : int.MaxValue;
+            res = res * 10 + number;
+        }
+        return IsNeg ? -res : res;
+    }
+
+    public static int AtoiLeet(this string s)
+    {
+        if (s.Contains('-') && s.Contains('+'))
+            return 0;
+        bool IsNeg = s.Contains('-');
+        s = s.ToLower();
+        int res = 0;
+        int count = 0;
+
+        while (count < s.Length &&  (s[count] == ' ' || s[count] == '-' || s[count] == '+' || s[count] == '0')) {
+           count++;
+        }
+        for (int i = count; i < s.Length; i++) {
+            if (!Char.IsDigit(s[i]))
+                return res;
+            int number = (int)Char.GetNumericValue(s[i]);
+            if (res > int.MaxValue / 10 || (res == int.MaxValue / 10 && int.MaxValue % 10 == number))
+                return IsNeg ? -int.MaxValue - 1 : int.MaxValue;
+            res = res * 10 + (int)Char.GetNumericValue(s[i]);
+        }
+        return IsNeg ? -res : res;
+    }
 }

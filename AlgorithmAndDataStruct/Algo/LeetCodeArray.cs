@@ -62,7 +62,7 @@ public static class LeetCodeArray
         nums[j] = tmp;
     }
     
-    public static void Rotate(int[] nums, int k) {
+    public static void RotateOld(int[] nums, int k) {
         if (nums.Length == 0 || nums.Length == 1 || k <= 0 || k < 0)
             return ;
         if (k > nums.Length)
@@ -109,6 +109,104 @@ public static class LeetCodeArray
             }
         }
         return numbers.ToArray();
+    }
+
+    public static int[] TwoSum(int[] nums, int target) {
+        for (int i = 0; i < nums.Length; i++) {
+            for (int j = i + 1; j < nums.Length; j++) {
+                Console.WriteLine($"I {i} J {j}");
+                if (j < nums.Length && i < nums.Length && nums[i] + nums[j] == target)
+                    return new int[] {j, i};
+            }
+        }
+        return null;
+    }
+
+    public static int SearchInsert(this int[] nums, int target)
+    {
+        int low = 0, height = nums.Length, mid = (low + height) / 2;
+        
+        while (mid >= 0 && mid < nums.Length) {
+            Console.WriteLine($"test IN LOW {low} HEIGHT {height} MID {mid} |=> {nums[mid]}");
+            if (nums[mid] == target)
+                return mid;
+            if (mid + 1 == height && mid - 1 == low)
+                return nums[mid] < target ? mid : height;
+            if (nums[mid] > target)
+                height = mid;
+            else if (nums[mid] < target)
+                low = mid;
+            mid = (low + height) / 2;
+        }
+        return 0;
+    }
+
+        public static int[] SortedSquares(this int[] nums) {
+        int[] result = new int[nums.Length];
+        
+        for (int i = 0; i < nums.Length; i++) {
+            result[i] = nums[i] * nums[i];
+        }
+        return result.OrderBy(n => n).ToArray();
+    }
+
+    private static int[] endString(int[] nums, int k) {
+        int[] array = new int[k];
+        int j = 0;
+
+        for (int i = nums.Length - k; i < nums.Length; i++) {
+            array[j++] = nums[i];
+        }
+        return array;
+    }
+    private static int[] startString(int[] nums, int k) {
+        int[] array = new int[nums.Length - k];
+
+        for (int i = 0; i < nums.Length - k; i++) {
+            array[i] = nums[i];
+        }
+        return array;
+    }
+
+    public static void Rotate(this int[] nums, int k) {
+        int[] endOfArray = endString(nums, k);
+        int[] startOfArray = startString(nums, k); 
+
+        for (int i = 0; i < nums.Length - k; i++) {
+            nums[i + k] = startOfArray[i];
+        }
+        for (int i = 0; i < k; i++) {
+            nums[i] = endOfArray[i];
+        }
+    }
+
+    private static int CountZero(int[] nums, int index) {
+        int count = 0;
+        
+        while (index < nums.Length && nums[index] == 0) {
+            count++;
+            index++;
+        }
+        return count;
+    } 
+    
+    public static void MoveZeroes(this int[] nums) {
+        if (nums.Length <= 1)
+            return ;
+        int count = 0;
+        
+        for (int i = 0; i + count < nums.Length; i++) {
+            if (nums[i + count] != 0) {
+                nums[i] = nums[i + count];
+                continue ;
+            }
+            int countZero = CountZero(nums, i + count);
+            count += countZero;
+            Console.WriteLine($"test {count} < {nums.Length}");
+            nums[i] = nums[i + count];
+        }
+        for (int i = nums.Length - count; i < nums.Length; i++)
+            nums[i] = 0;
     }
 
 }

@@ -85,19 +85,72 @@ public static class LeetCodeLinkedList
     }
 
     public static ListNode MergeTwoLists(ListNode list1, ListNode list2) {
-        ListNode newHead = list1;
+        if (list1 == null && list2 == null)
+            return null;
+        if (list1 == null)
+            return list2;
+        if (list2 == null)
+            return list1;
+        ListNode result = new ListNode(list1.val <= list2.val ? list1.val : list2.val);
+        if (list1.val <= list2.val)
+            list1 = list1.next;
+        else
+            list2 = list2.next;
+        ListNode tmpResult = result;
 
+        
         while (list1 != null && list2 != null) {
-            if (list1.val > list2.val) {
-                newHead = list1;
+            //Console.WriteLine($"IN {list1.val} {list2.val}");
+
+            if (list2 == null || list1.val <= list2.val) {
+                tmpResult.next = new ListNode(list1.val);
                 list1 = list1.next;
             }
-            else if (list1.val < list2.val) {
-                newHead = list2;
+            else if (list1 == null || list1.val > list2.val) {
+                tmpResult.next = new ListNode(list2.val);
                 list2 = list2.next;
             }
-            newHead = newHead.next;
+
+            tmpResult = tmpResult.next;
         }
-        return list1;
+        while (list1 != null) {
+            tmpResult.next = new ListNode(list1.val);
+            list1 = list1.next;
+            tmpResult = tmpResult.next;
+        }
+        while (list2 != null) {
+            tmpResult.next = new ListNode(list2.val);
+            list2 = list2.next;
+            tmpResult = tmpResult.next;
+        }
+        return result;
+    }
+
+    public static bool HasCycle(ListNode head) {
+        if (head == null || head.next == null)
+            return false;
+        ListNode hare = head.next;
+        ListNode tortoise = head;
+
+        while (true) {
+            if (tortoise == null || hare == null || hare.next == null)
+                return false;
+            if (tortoise == hare)
+                return true;
+            tortoise = tortoise.next;
+            hare = hare.next.next;
+        }
+    }
+
+    public static ListNode ReverseList(ListNode head) {
+        ListNode current = head, previous = null, next = null;
+
+        while (current != null) {
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+        return previous;
     }
 }
