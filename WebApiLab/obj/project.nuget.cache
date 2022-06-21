@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "92Haxo0cqkF8k2mQOJkC0mRDT9zs6k75hQpad/L6lAPKcRgyAnioZxJRV/hE6VTKcgvgjEfj8wFfh2Nva+IC/A==",
+  "success": true,
+  "projectFilePath": "/Users/beduroule/Documents/Code/FormationMargo/MargoLab/WebApiLab/WebApiLab.csproj",
+  "expectedPackageFiles": [
+    "/Users/beduroule/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/beduroule/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/beduroule/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/Users/beduroule/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/Users/beduroule/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/Users/beduroule/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
