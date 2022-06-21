@@ -209,4 +209,93 @@ public static class LeetCodeArray
             nums[i] = 0;
     }
 
+    public static void MoveZeroesBis(this int[] nums) {
+        int count = 0;
+        List<int> listNums = new List<int>();
+
+        foreach (var elem in nums) {
+            if (elem == 0)
+                count++;
+            else 
+                listNums.Add(elem);
+        }
+        for (int i = 0; i < nums.Length; i++) {
+            if (i < listNums.Count())
+                nums[i] = listNums[i];
+            else
+                nums[i] = 0;
+
+        }
+    }
+
+    public static int[] Merge(int[] tabA, int[] tabB)
+    {
+        int indexA = 0;
+        int indexB = 0;
+        int[] result = new int[tabA.Length + tabB.Length];
+
+        for (int i = 0; i < result.Length; ++i) {
+            if (indexA < tabA.Length && indexB < tabB.Length) {
+                if (tabA[indexA] < tabB[indexB]) {
+                    result[i] = tabA[indexA++];
+                } else {
+                    result[i] = tabB[indexB++];
+                }
+            }
+            else if (indexA < tabA.Length) {
+                result[i] = tabA[indexA++];
+            }
+            else if (indexB < tabB.Length) {
+                result[i] = tabB[indexB++];
+            }
+        }
+        return result;
+    }
+
+    public static bool IsNullOrEmpty(int[] array)
+    {
+        return (array == null || array.Length == 0);
+    }
+    
+    public static double calculateMdian(int[] t) {
+        if (t.Length % 2 != 0)
+            return t[t.Length / 2];
+        return (double)(t[(t.Length / 2) - 1] + t[(t.Length / 2)]) / 2d;
+    }
+    
+    public static double FindMedianSortedArrays(int[] nums1, int[] nums2) {
+        if (IsNullOrEmpty(nums1) && IsNullOrEmpty(nums2))
+            return 0d;
+        if (IsNullOrEmpty(nums1) || IsNullOrEmpty(nums2))
+            return IsNullOrEmpty(nums2) ? calculateMdian(nums1) : calculateMdian(nums2);
+        return calculateMdian(Merge(nums1, nums2));
+    }
+
+    public static int RunningSum(int[] nums, int start, int end) {
+        if(end > nums.Length)
+            return -1;
+        int result = 0;
+
+        for (int i = start; i < end; i++) {
+            result += nums[i];
+        }
+        return result;
+    }
+    
+    public static int PivotIndex(this int[] nums) {
+        int mid = nums.Length / 2;
+
+        while (true) {
+            int endRange = RunningSum(nums, mid + 1, nums.Length), startRange = RunningSum(nums, 0, mid);
+            Console.WriteLine($"test start {startRange} end {endRange} {mid} {nums[mid + 1]}");
+            if (startRange == endRange)
+                return mid;
+            if (startRange > endRange)
+                mid = (nums.Length - mid) / 2;
+            else
+                mid += (nums.Length - mid) / 2;
+        }
+        return mid;
+    }
+
 }

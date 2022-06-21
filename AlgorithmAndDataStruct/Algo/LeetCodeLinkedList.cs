@@ -153,4 +153,39 @@ public static class LeetCodeLinkedList
         }
         return previous;
     }
+
+    public static ListNode MiddleNode(ListNode head) {
+        return null;
+    }
+
+    private static int ListNodeSize2(ListNode head) {
+        int count = 0;
+        
+        while (head != null) {
+            count++;
+            head = head.next;
+        }
+        return count;
+    }
+    
+    public static ListNode RemoveNthFromEnd2(ListNode head, int n) {
+        if (n == 0)
+            return head.next;
+        int count = ListNodeSize2(head);
+        ListNode current = head, prev = null, next = null;
+        
+        while (current != null) {
+            next = current.next;
+            if (count == n) {
+                if (prev == null)
+                    return head.next;
+                prev.next = next;
+                return head;
+            }
+            prev = current;
+            current = current.next;
+            count--;
+        }
+        return head;
+    }
 }

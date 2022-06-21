@@ -48,7 +48,6 @@ static public  class SortNumberTab
         int result = 0;
         int lastProfilt = -1;
         int tmpResult = 0;
-        int tmpIndex = -1;
         
         for (int i = 0; i < prices.Length; i++) {
             for (int j = i; j < prices.Length; j++) {

@@ -158,4 +158,46 @@ public static class LeetCodeString
         }
         return IsNeg ? -res : res;
     }
+
+    public static string ReverseString(char[] s) {
+        for (int i = 0; i < s.Length / 2; i++) {
+            char tmp = s[i];
+            s[i] = s[s.Length - i - 1];
+            s[s.Length - i - 1] = tmp;
+        }
+        return new string(s);
+    }
+    
+    public static string ReverseWords(string s) {
+        if (String.IsNullOrEmpty(s))
+            return s;
+        string[] words = s.Split(' ');
+        s = "";
+        
+        for (int i = 0; i < words.Length; i++) {
+            s += ReverseString(words[i].ToCharArray());
+            if (i != words.Length - 1)
+                s += ' ';
+        }
+        return s;
+    }
+
+    public static int LengthOfLongestSubstring(string s) {
+        if (String.IsNullOrEmpty(s))
+            return 0;
+        int count = 0;
+        HashSet<char> hashMap = new HashSet<char>();
+        
+        for (int i = 0; i < s.Length; i++) {
+            int tmp = 0;
+            for (int j = i; j < s.Length && !hashMap.TryGetValue(s[j], out char _); j++) {
+                hashMap.Add(s[j]);
+                tmp++;
+            }
+            hashMap.Clear();
+            if (tmp > count)
+                count = tmp;
+        }
+        return count;
+    }
 }
