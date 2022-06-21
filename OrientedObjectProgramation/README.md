@@ -165,20 +165,26 @@ Un  processus est programme en cour d'éxécution c'est lui qui execute les inst
 
 ### Tread / Task
 
-`Task`  est une class de c# qui permet de créer une tache qui sera executer de manière asynchrone, contrairement a thread, task ne crée pas de nouveau thread mais vas chercher dans thread pull. Task peu  également dire si il a fini ca tache et retourner une valeur.
+- `Task`  est une class de c# qui permet de créer une tache qui sera executer de manière asynchrone, contrairement a thread, task ne crée pas de nouveau thread mais vas chercher dans thread pull. Task peu  également dire si il a fini ca tache et retourner une valeur. Task est une promesse d'avoir un résultat dans l'avenir comme `Task.Delay()` qui n'utilise pas de CPU réel, mais reviens plus a lancer une minuterie,  `Task.Run()` reviens a dire je veux exécuter ce code séparément  .Pour résumer `Task` est plus une abstraction de "où executer le code", c'est une promesse de résultats. 
 
-`Thread` est une class qui vas prendre en charge un bloque d'instruction et l'executer a coter de la tram principe du programme, il a sa propre zone mémoire (stack la hype et commune a tous les thread du processus).
+- `Thread` est une class qui vas prendre en charge un bloque d'instruction et l'executer a coter de la tram principe du programme, il a sa propre zone mémoire (stack la hype et commune a tous les thread du processus). `Thread` est plus bas niveau que `task` et ne vas pas chercher un `thread` dans un pool mais bien créer un nouveau thread, il sera donc séparer du pool de thread et éxécuter à par.
 
 ### synchrone asynchrone
 
-Une méthode synchrone est une méthode qui vas executer des instruction les une après les autre, la ou la méthode asynchrone les executeras tout en meme temps si on ne spécifie pas d'attendre que instruction ou un bloque d'instruction soit executer.
+Une méthode synchrone est une méthode qui vas executer des instruction les une après les autre, la ou la méthode asynchrone les executeras tout en meme temps si on ne spécifie pas d'attendre que instruction ou un bloque d'instruction soit executer. Une methode Asyncron revoie une `Task` soit une promesse de résultat.
 
 ### Section critique 
 
 Une section critique est une portion de code ou il ne peu y avoir plus un thread simultanément. On peut s'assurer de ça en utilisant des mutex qui est une class qui permet de synchronisé l’accès à une ressource protégée  en interdisant l'accès à celle-ci par tout les autre thread. 
 
-### Deadlock
+### Deadlock / liveLock
 
 Le Deadlock ou interblocage est la situation dans laquelle 2 threads s’attendent mutuellement,
+
+### Objets mutable / immuable
+
+Un objet mutable est un objet qui être modifier contrairement a un objet immuable qui, luis, ne l'est pas comme par exemple `String` qui si on veut changer ca valeur, il faut le supprimer et le recréer.
+
+
 
 
