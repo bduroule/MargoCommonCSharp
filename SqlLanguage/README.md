@@ -96,7 +96,7 @@ NATURAL JOIN table2
 
 ### CROSS JOIN
 
-![](Image/full.jpg)
+![](Image/cross.jpg)
 Le `CROSS JOIN` permet de, pour chaque ligne dune table A, on retournera toute les ligne d'une table B jointe a la ligne en question. Elle est souvent jointe a un `WHERE` pour filtrer les résultats.
 
 ```sql
