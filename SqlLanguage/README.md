@@ -70,3 +70,39 @@ RIGHT JOIN tableB
 ON condition # souvent :: tableA.tablebId = tableB.id
 WHERE condition
 ```
+
+### FULL JOIN
+
+![](Image/full.jpg) 
+jointure externe pour retourner les résultats quand la condition est vrai dans au moins une des 2 tables. le champ qui match pas sont remplasser par `null`
+
+```sql
+SELECT tableA.value1, tableB.value1, tableA.value2 
+FROM tableA
+RIGHT JOIN tableB
+ON condition
+WHERE condition
+```
+
+### NATURAL JOIN
+
+le natural join premet de fusionner deux table qui une ou des colonne en commun et sortira tous les champ identique, il n'y a pas besoin de `ON` du coup.
+
+```sql
+SELECT *
+FROM table1
+NATURAL JOIN table2
+```
+
+### CROSS JOIN
+
+![](Image/full.jpg)
+Le `CROSS JOIN` permet de, pour chaque ligne dune table A, on retournera toute les ligne d'une table B jointe a la ligne en question. Elle est souvent jointe a un `WHERE` pour filtrer les résultats.
+
+```sql
+SELECT *
+FROM table1
+CROSS JOIN table2
+```
+
+### SELF JOIN
