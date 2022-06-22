@@ -14,7 +14,9 @@
 |B| 10|
 |A| 1|
 |B| 2|
+
 `SELECT nom, SOMME(valeur F) FROM table GROUP BY nom`
+
 |Nom| valeur|
 |--|--|
 | A|20|
