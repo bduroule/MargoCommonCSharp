@@ -43,7 +43,7 @@ jointure interne pour retourner les enregistrements quand la condition est vrai 
 SELECT tableA.value1, tableB.value1, tableA.value2 
 FROM tableA
 INNER JOIN tableB
-ON condition // souvent :: tableA.tablebId = tableB.id
+ON condition # souvent :: tableA.tablebId = tableB.id
 WHERE condition
 ```
 
@@ -55,7 +55,7 @@ jointure qui renvoie tous element de la `Table A` et les element de la `Table B`
 SELECT tableA.value1, tableB.value1, tableA.value2 
 FROM tableA
 LEFT JOIN tableB
-ON condition // souvent :: tableA.tablebId = tableB.id
+ON condition # souvent :: tableA.tablebId = tableB.id
 WHERE condition
 ```
 
@@ -67,6 +67,6 @@ jointure qui renvoie tous element de la `Table B` et les element de la `Table A`
 SELECT tableA.value1, tableB.value1, tableA.value2 
 FROM tableA
 RIGHT JOIN tableB
-ON condition // souvent :: tableA.tablebId = tableB.id
+ON condition # souvent :: tableA.tablebId = tableB.id
 WHERE condition
 ```
