@@ -106,3 +106,34 @@ CROSS JOIN table2
 ```
 
 ### SELF JOIN
+
+SELF JOIN permet de joindre une table avec elle meme [......]
+
+```sql
+SELECT `u1`.`u_id`, `u1`.`u_nom`, `u2`.`u_id`, `u2`.`u_nom`
+FROM `utilisateur` as `u1`
+LEFT OUTER JOIN `utilisateur` as `u2` ON `u2`.`u_manager_id` = `u1`.`u_id`
+```
+
+## Mise en application
+
+En SQL un index est une clef unique permentant d'identifier un element dans une table. Il sont utilisés pour récupérer les données de la base de données plus rapidement qu'autrement. Les utilisateurs ne peuvent pas les voir, ils sont juste utilisés pour accélérer les recherches/requêtes.pour creer un Index il faut utiliser l'instruction CREATE INDEX.
+
+```sql
+# cree un index
+CREATE  INDEX  _index_name_  
+ON  _table_name_ 
+
+#cree un index unique 
+CREATE  UNIQUE  INDEX  _index_name_  
+ON  _table_name_
+```
+On peut aussi creer un index sur ou plusieur colonne 
+```sql
+#Une col
+CREATE  INDEX  _index_name_  
+ON  _table_name_ (_column1_);
+# Plusieur col
+CREATE  INDEX  _index_name_  
+ON  _table_name_ (_column1_, _column2_, ...);
+```
