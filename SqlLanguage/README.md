@@ -137,9 +137,10 @@ ON  _table_name_ (_column1_);
 CREATE  INDEX  _index_name_  
 ON  _table_name_ (_column1_, _column2_, ...);
 ```
+
 ## Mise en application
 
-- En SQL un index est une clef unique permentant d'identifier un element dans une table. Il sont utilisés pour récupérer les données de la base de données plus rapidement qu'autrement. Les utilisateurs ne peuvent pas les voir, ils sont juste utilisés pour accélérer les recherches/requêtes.pour creer un Index il faut utiliser l'instruction CREATE INDEX.
+- En SQL un index est une clef unique permettant d'identifier un élément dans une table. Il sont utilisés pour récupérer les données de la base de données plus rapidement qu'autrement. Les utilisateurs ne peuvent pas les voir, ils sont juste utilisés pour accélérer les recherches/requêtes.pour créer un Index il faut utiliser l'instruction CREATE INDEX.
 ```sql
 # cree un index
 CREATE  INDEX  _index_name_  
@@ -149,7 +150,7 @@ ON  _table_name_
 CREATE  UNIQUE  INDEX  _index_name_  
 ON  _table_name_
 ```
-On peut aussi créer un index sur ou plusieur colonne 
+On peut aussi créer un index sur ou plusieurs colonne 
 ```sql
 #Une col
 CREATE  INDEX  _index_name_  
@@ -172,7 +173,7 @@ $$;`
  ```sql
  CALL insert_data(1, 2);
  ```
- - une primary key est un index, chaque table peut contenir qu'une seul primary key qui ce doit d'etre unique, L’usage le plus fréquent consiste à créer une colonne numérique qui s’incrémente automatiquement à chaque enregistrement grâce à AUTO_INCREMENT.
+ - une primary key est un index, chaque table peut contenir qu'une seul primary key qui ce doit d'être unique, L’usage le plus fréquent consiste à créer une colonne numérique qui s’incrémenté automatiquement à chaque enregistrement grâce à AUTO_INCREMENT.
 ```sql
 CREATE TABLE `nom_de_la_table` (
   id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -204,8 +205,8 @@ CREATE TABLE `comments` (
 - Les contrainte sont des regles restreignant les valeur mise en base, ce qui permet un degres de fiabiliter et de protection suplemantaire, en garantissant l'exactitude et la fiabilité des donnée, elles peuvent s'appliquer au niveau de la table en entier ou a une seule colonne, les plus courent sont: 
   - `NOT NULL` qui interdit davoir des element null dans la table ou colonne selon ou a ete appliquer la contrainte
   - `DEFAULT` permet de definir une valeur par defaut 
-  - `UNIQUE` definit qu'on ne peut pas retrouver deux fois le meme element dans une colonne
-  - `CHECK` fait que tous les element doivent valider une condition
+  - `UNIQUE` définit qu'on ne peut pas retrouver deux fois le même élément dans une colonne
+  - `CHECK` fait que tous les élément doivent valider une condition
   - `INDEX` comme vue plus haut elle permet de cree un index
  
  ```sql
@@ -217,7 +218,7 @@ CREATE TABLE `comments` (
   age INT CHECK(age >= 18)
 );
 ```
- -Une fonction de groupe permet de faire un calcule sur l'ensemble des elements d'une colonne grace a un `SELECT`, exemple: 
+ -Une fonction de groupe permet de faire un calcule sur l'ensemble des éléments d'une colonne grâce a un `SELECT`, exemple: 
  ```sql
  #Donner le total des salaires du département 10.
  SELECT SUM(salaire)
@@ -238,4 +239,48 @@ WHERE salaire = (SELECT MAX(salaire)
  ```sql
  SELECT * FROM `table` LIMIT 10
  ```
- - Un trigger ...
+ - Un trigger permet d'exécuter un ensemble de instruction SQL après un événement particulier. 
+ 
+ ```sql
+ CREATE TRIGGER trigger_name  
+{BEFORE | AFTER} {INSERT | UPDATE| DELETE }  
+ON table_name FOR EACH ROW
+[...]
+trigger_body;
+[...]
+ ```
+
+> On peut traduire cette requête par *Créer un TRIGGER appeler "triger_name" qui avant ou après l'ajout, la modification ou la suppression sur la table "table_name" fait "trigger_body" pour toute les ligne de la table*.
+
+- Une vue est comme un table alternative sur la qu'elle a partir d'une table on restreindre l'accse a certaine donnée, faire des jointure, ou autre
+> Les vues en deux mots : des tables virtuelles 
+> Les vues en une phrase : une vue est une table qui est le résultat d’une requête (SELECT) à laquelle on a donné un nom
+
+Pour déclarer un vue :
+```sql
+CREATE VIEW `view_name` AS *view_implemantation*
+``` 
+exemple de vue :
+```sql
+# on crée deux table Employes et regions
+`CREATE` `TABLE` `Employes(`
+	`Id` `INT` `NOT` `NULL``,`
+	`Nom` `VARCHAR` `(20)` `NOT` `NULL``,`
+	`Age` `INT` `NOT` `NULL``,`
+	`Salaire` `DECIMAL` `(18, 2),`
+	`PRIMARY` `KEY` `(Id)`
+`);`
+
+CREATE TABLE regions(
+	objectid integer not null,
+	emp_id integer not null,
+	reg_id integer not null,
+	rname varchar(32),
+	region geometry
+);
+
+#on crée une vue qui donne l'acsai uniquement a Employes ayant departement a 201
+CREATE  VIEW  view_dept_201  AS  SELECT  emp_id,  name, hire_date  FROM  gdb.employees  WHERE  department  =  201;
+
+SELECT * FROM view_dept_201
+```
