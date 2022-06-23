@@ -43,7 +43,7 @@ public static class LeetCodeLinkedList
         return head;
     }
 
-        public static ListNode RemoveElement(ListNode head, ListNode node) {
+    public static ListNode RemoveElement(ListNode head, ListNode node) {
         if (head == null || head.next == null)
             return null;
         if (head.Equals(node))
