@@ -137,3 +137,105 @@ ON  _table_name_ (_column1_);
 CREATE  INDEX  _index_name_  
 ON  _table_name_ (_column1_, _column2_, ...);
 ```
+## Mise en application
+
+- En SQL un index est une clef unique permentant d'identifier un element dans une table. Il sont utilisés pour récupérer les données de la base de données plus rapidement qu'autrement. Les utilisateurs ne peuvent pas les voir, ils sont juste utilisés pour accélérer les recherches/requêtes.pour creer un Index il faut utiliser l'instruction CREATE INDEX.
+```sql
+# cree un index
+CREATE  INDEX  _index_name_  
+ON  _table_name_ 
+
+#cree un index unique 
+CREATE  UNIQUE  INDEX  _index_name_  
+ON  _table_name_
+```
+On peut aussi créer un index sur ou plusieur colonne 
+```sql
+#Une col
+CREATE  INDEX  _index_name_  
+ON  _table_name_ (_column1_);
+# Plusieur col
+CREATE  INDEX  _index_name_  
+ON  _table_name_ (_column1_, _column2_, ...);
+```
+- Les procédures stockées est un concept de gestion de base de donnée, c'est un ensemble d'instruction SQL, c'est comme une fonction.
+ ```sql
+ `CREATE PROCEDURE  
+insert_data(a integer, b integer)  
+LANGUAGE SQL  
+AS $$  
+INSERT INTO tbl VALUES (a);  
+INSERT INTO tbl VALUES (b);  
+$$;` 
+ ```
+ Pour exécuter la procédure stockée, il est possible d’exécuter la requête SQL suivante :
+ ```sql
+ CALL insert_data(1, 2);
+ ```
+ - une primary key est un index, chaque table peut contenir qu'une seul primary key qui ce doit d'etre unique, L’usage le plus fréquent consiste à créer une colonne numérique qui s’incrémente automatiquement à chaque enregistrement grâce à AUTO_INCREMENT.
+```sql
+CREATE TABLE `nom_de_la_table` (
+  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  [...]
+);
+```
+- Une clef secondaire est une clef qui n'est pas unique qui sert a identifier des element dans une table comme le sont par exemple les clef extern qui, le plus souvent, est une clef primaire d'une autre table par exemple imaginons que nous avons une table users et une table comment dans comment on vas avoir l'id de l'utilisateur qui a poster le commentaire et etant donner qu'un utilisateur peux poster plusieurs commentaire cette id ne serat pas unique.
+```sql
+# user table
+CREATE TABLE `users` (
+  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  [...]
+);
+
+# comments table
+CREATE TABLE `comments` (
+  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  user_id INT REFERENCES users(id),
+  [...]
+);
+
+# ou ||
+CREATE TABLE `comments` (
+  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  FOREIGN KEY (user_id) REFERENCES users(id),
+  [...]
+);
+```
+- Les contrainte sont des regles restreignant les valeur mise en base, ce qui permet un degres de fiabiliter et de protection suplemantaire, en garantissant l'exactitude et la fiabilité des donnée, elles peuvent s'appliquer au niveau de la table en entier ou a une seule colonne, les plus courent sont: 
+  - `NOT NULL` qui interdit davoir des element null dans la table ou colonne selon ou a ete appliquer la contrainte
+  - `DEFAULT` permet de definir une valeur par defaut 
+  - `UNIQUE` definit qu'on ne peut pas retrouver deux fois le meme element dans une colonne
+  - `CHECK` fait que tous les element doivent valider une condition
+  - `INDEX` comme vue plus haut elle permet de cree un index
+ 
+ ```sql
+ CREATE TABLE `comments` (
+  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  FOREIGN KEY (user_id) REFERENCES users(id),
+  creation_date DATE DEFAULT NOW()
+  email VARCHAR(255) NOT NULL UNIQUE
+  age INT CHECK(age >= 18)
+);
+```
+ -Une fonction de groupe permet de faire un calcule sur l'ensemble des elements d'une colonne grace a un `SELECT`, exemple: 
+ ```sql
+ #Donner le total des salaires du département 10.
+ SELECT SUM(salaire)
+FROM emp
+WHERE n_dept = 10;
+
+#Donner le nom, la fonction et le salaire de l'employé (ou des employés) ayant le salaire le plus élevé.
+SELECT nom, fonction, salaire
+FROM emp
+WHERE salaire = (SELECT MAX(salaire)
+                 FROM emp);
+ ```
+ - `HAVING` permet de filtrer en utilisant des fonctions telles que SUM(), COUNT(), AVG(), MIN() ou MAX() contrairement a `WHERE` qui ne les supporte pas.
+ ```sql
+ SELECT * FROM `table` HAVING COUNT(`value`) > number
+ ```
+ - Pour retourner un nombre limiter de valeur il faut utilser le mot clef `LIMIT`
+ ```sql
+ SELECT * FROM `table` LIMIT 10
+ ```
+ - Un trigger ...
