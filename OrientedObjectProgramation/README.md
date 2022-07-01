@@ -62,6 +62,23 @@ Le Dictionnaire est une structure de donner qui stock dans un format clef / vale
 
 un constructeur est une méthode qui est appeler à l'initialisation de l'objet. [...]
 
+### Méthode abstraite
+
+Une class absraite posede au moins une méthode ou propriété  abstraite (sans implémentation)
+```cs
+public abstarct class ClassName {
+	// Propriétés abstraites
+	public abstract string propertieName { get; set; }
+	// method pas abstrete
+	public void nameMethode(int param1, char param2) {
+		// implémentation
+	}
+	// method abstrete
+	public abstract void nameMethode(int param1, char param2);
+}
+```
+La classe implémentant les méthodes abstraites de la classe de base doit utiliser le mot clé `override`, car les méthodes abstraites sont implicitement virtuelles également.
+
 
 ## Les Design Patterns
 
