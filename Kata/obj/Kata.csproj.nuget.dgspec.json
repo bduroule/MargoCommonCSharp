@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/Kata/Kata.csproj": {}
+    "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/Kata/Kata.csproj": {}
   },
   "projects": {
-    "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/Kata/Kata.csproj": {
+    "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/Kata/Kata.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/Kata/Kata.csproj",
+        "projectUniqueName": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/Kata/Kata.csproj",
         "projectName": "Kata",
-        "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/Kata/Kata.csproj",
+        "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/Kata/Kata.csproj",
         "packagesPath": "/Users/beduroule/.nuget/packages/",
-        "outputPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/Kata/obj/",
+        "outputPath": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/Kata/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/beduroule/.nuget/NuGet/NuGet.Config"

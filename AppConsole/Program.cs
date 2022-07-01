@@ -203,17 +203,23 @@ namespace AppConsole
 
             // Console.WriteLine($" coucou fib {LeetCodeMatth.LenLongestFibSubseq(new int[] {1,2,3,4,5,6,7,8})}  |  {LeetCodeMatth.Tribonacci(5)}");
 
-            var testArr = new int[] {-4,-1,0,3,10}.SortedSquares();
-            testArr = new int[] {2,1,-1};
-            Console.WriteLine($"piv = {testArr.PivotIndex()}");
+            // ! ---------------------------
+
+            // var testArr = new int[] {-4,-1,0,3,10}.SortedSquares();
+            // testArr = new int[] {2,1,-1};
+            // Console.WriteLine($"piv = {testArr.PivotIndex()}");
 
 
-            foreach (var e in testArr) {
-                Console.Write($"{e}, ");
-            }
+            // foreach (var e in testArr) {
+            //     Console.Write($"{e}, ");
+            // }
+            // ! ---------------------------
+
 
             // Console.WriteLine($"rev Words {LeetCodeString.LengthOfLongestSubstring("abcabcbb")}");
-
+            testMultithreading testT = new testMultithreading();
+            testT.start();
+            LoremIpsum.printText();
         }
     }
 }

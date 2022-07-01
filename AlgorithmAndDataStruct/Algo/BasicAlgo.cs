@@ -45,11 +45,11 @@ public class BasicAlgo
      }
 
      public int Fibinacci(int n)
-     {
+    {
         if (n == 0 || n == 1)
             return n;
         return Fibinacci(n - 1) + Fibinacci(n - 2);
-     }
+    }
 
     public int FibinacciIteratif(int n)
     {

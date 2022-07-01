@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7uW8fTSTcuHiOQIy4HssOYWzQ47ljTho8vs6+1CJ9CEAPKk5r8hjBNi7bH/h4Boz/uOp4Fmp4qS+iFkASMj/MA==",
+  "dgSpecHash": "3eaBtsfb84293M6aQHFcTyX9fiNYWk6LDf7tnEbho6YFs+ohgOhoM3W6vOn1FDkska/6dgxMtRDJ0TS8zECX/w==",
   "success": true,
-  "projectFilePath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/OrientedObjectProgramation.csproj",
+  "projectFilePath": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/OrientedObjectProgramation/OrientedObjectProgramation.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

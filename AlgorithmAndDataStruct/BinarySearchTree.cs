@@ -24,7 +24,7 @@ public class BinarySearchTree<T> where T : IComparable
         BinaryTreeNode<T> node = new BinaryTreeNode<T>(array[middle]);
 
         node.left = ArraySortedToTree(array, Start, middle - 1);
-        node.reight =  ArraySortedToTree(array, middle + 1, End);
+        node.reight = ArraySortedToTree(array, middle + 1, End);
 
         return node;
     }

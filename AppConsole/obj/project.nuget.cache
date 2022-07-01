@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "utFDrT4pAUnWmLDedzrEw8CXP+KKX49axGE26foZgm8ZMnMyew/zA4CLTtEHDtGnx6DH0vrkBSPboxXGhTwKoQ==",
+  "dgSpecHash": "2XB0MPfa1DKUivLriLACWcVkBCkt6qzRdM0rKbP5QU84NTb0V5f/0zvDP5mEWIcSB2k6sxmGeMNtB7ZRlNnJmQ==",
   "success": true,
-  "projectFilePath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AppConsole/AppConsole.csproj",
+  "projectFilePath": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/AppConsole/AppConsole.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AppConsole/AppConsole.csproj": {}
+    "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/AppConsole/AppConsole.csproj": {}
   },
   "projects": {
-    "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj": {
+    "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj",
+        "projectUniqueName": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj",
         "projectName": "AlgorithmAndDataStruct",
-        "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj",
+        "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj",
         "packagesPath": "/Users/beduroule/.nuget/packages/",
-        "outputPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/obj/",
+        "outputPath": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/AlgorithmAndDataStruct/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/beduroule/.nuget/NuGet/NuGet.Config"
@@ -56,14 +56,14 @@
         }
       }
     },
-    "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AppConsole/AppConsole.csproj": {
+    "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/AppConsole/AppConsole.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AppConsole/AppConsole.csproj",
+        "projectUniqueName": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/AppConsole/AppConsole.csproj",
         "projectName": "AppConsole",
-        "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AppConsole/AppConsole.csproj",
+        "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/AppConsole/AppConsole.csproj",
         "packagesPath": "/Users/beduroule/.nuget/packages/",
-        "outputPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AppConsole/obj/",
+        "outputPath": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/AppConsole/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/beduroule/.nuget/NuGet/NuGet.Config"
@@ -78,14 +78,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj": {
-                "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj"
+              "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj": {
+                "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj"
               },
-              "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/Kata/Kata.csproj": {
-                "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/Kata/Kata.csproj"
+              "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/Kata/Kata.csproj": {
+                "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/Kata/Kata.csproj"
               },
-              "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/OrientedObjectProgramation.csproj": {
-                "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/OrientedObjectProgramation.csproj"
+              "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/OrientedObjectProgramation/OrientedObjectProgramation.csproj": {
+                "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/OrientedObjectProgramation/OrientedObjectProgramation.csproj"
               }
             }
           }
@@ -118,14 +118,14 @@
         }
       }
     },
-    "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/Kata/Kata.csproj": {
+    "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/Kata/Kata.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/Kata/Kata.csproj",
+        "projectUniqueName": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/Kata/Kata.csproj",
         "projectName": "Kata",
-        "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/Kata/Kata.csproj",
+        "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/Kata/Kata.csproj",
         "packagesPath": "/Users/beduroule/.nuget/packages/",
-        "outputPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/Kata/obj/",
+        "outputPath": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/Kata/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/beduroule/.nuget/NuGet/NuGet.Config"
@@ -170,14 +170,14 @@
         }
       }
     },
-    "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/OrientedObjectProgramation.csproj": {
+    "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/OrientedObjectProgramation/OrientedObjectProgramation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/OrientedObjectProgramation.csproj",
+        "projectUniqueName": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/OrientedObjectProgramation/OrientedObjectProgramation.csproj",
         "projectName": "OrientedObjectProgramation",
-        "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/OrientedObjectProgramation.csproj",
+        "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/OrientedObjectProgramation/OrientedObjectProgramation.csproj",
         "packagesPath": "/Users/beduroule/.nuget/packages/",
-        "outputPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/OrientedObjectProgramation/obj/",
+        "outputPath": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/OrientedObjectProgramation/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/beduroule/.nuget/NuGet/NuGet.Config"

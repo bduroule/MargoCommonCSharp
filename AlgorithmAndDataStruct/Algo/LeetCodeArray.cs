@@ -295,7 +295,6 @@ public static class LeetCodeArray
             else
                 mid += (nums.Length - mid) / 2;
         }
-        return mid;
     }
 
 }

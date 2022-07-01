@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uoLzjO0GJlOevyHxo792xm1ntnzq7Z5QAjqlJZFaEZ0ePhNnbhukpavmzWrCDBpVeFOPG3aZaaolmL44v/zSBA==",
+  "dgSpecHash": "C7XC4unp4YqQvMaf6PVQ0kOkdCF/tQGaykmVlnse0zPe6wd6PfO1p1SUk9khbyvHBtFdBEMs8xerwZaaoqI8SQ==",
   "success": true,
-  "projectFilePath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj",
+  "projectFilePath": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

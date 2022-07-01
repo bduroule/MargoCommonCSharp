@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj": {}
+    "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj": {}
   },
   "projects": {
-    "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj": {
+    "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj",
+        "projectUniqueName": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj",
         "projectName": "AlgorithmAndDataStruct",
-        "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj",
+        "projectPath": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/AlgorithmAndDataStruct/AlgorithmAndDataStruct.csproj",
         "packagesPath": "/Users/beduroule/.nuget/packages/",
-        "outputPath": "/Users/beduroule/Documents/Code/FormationMargo/MargoCommonCSharp/AlgorithmAndDataStruct/obj/",
+        "outputPath": "/Users/beduroule/Documents/Code/FormationMargo/c-sharp-lab/AlgorithmAndDataStruct/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/beduroule/.nuget/NuGet/NuGet.Config"
