@@ -184,7 +184,19 @@ Un  processus est programme en cour d'éxécution c'est lui qui execute les inst
 
 - `Task`  est une class de c# qui permet de créer une tache qui sera executer de manière asynchrone, contrairement a thread, task ne crée pas de nouveau thread mais vas chercher dans thread pull. Task peu  également dire si il a fini ca tache et retourner une valeur. Task est une promesse d'avoir un résultat dans l'avenir comme `Task.Delay()` qui n'utilise pas de CPU réel, mais reviens plus a lancer une minuterie,  `Task.Run()` reviens a dire je veux exécuter ce code séparément  .Pour résumer `Task` est plus une abstraction de "où executer le code", c'est une promesse de résultats. 
 
-- `Thread` est une class qui vas prendre en charge un bloque d'instruction et l'executer a coter de la tram principe du programme, il a sa propre zone mémoire (stack la hype et commune a tous les thread du processus). `Thread` est plus bas niveau que `task` et ne vas pas chercher un `thread` dans un pool mais bien créer un nouveau thread, il sera donc séparer du pool de thread et éxécuter à par.
+- `Thread` est une class qui vas prendre en charge un bloque d'instruction et l'executer a coter de la tram principe du programme, il a sa propre zone mémoire (stack, la hype et commune a tous les thread du processus). `Thread` est plus bas niveau que `task` et ne vas pas chercher un `thread` dans un pool mais bien créer un nouveau thread, il sera donc séparer du pool de thread et éxécuter à par. On implemente un thread comme suit
+```cs
+// on creer un nouvelle obj ThreadStart pour une methode qui ne prend pas d'argument
+Thread t = new Thread(new ThreadStart(function));
+// ou
+Thread t = new Thread(function);
+t.Start();
+
+// pour une methode qui prend un argument on vas creer un delegate : public  delegate  void  ParameterizedThreadStart(object obj)
+Thread t = new Thread(function);
+t.Start(parametre);
+
+``` 
 
 ### synchrone asynchrone
 
@@ -202,6 +214,54 @@ Le Deadlock ou interblocage est la situation dans laquelle 2 threads s’attende
 
 Un objet mutable est un objet qui être modifier contrairement a un objet immuable qui, luis, ne l'est pas comme par exemple `String` qui si on veut changer ca valeur, il faut le supprimer et le recréer.
 
+### Appelle bloquant
 
+Un appelle bloquant survient quand un thread fait un appelle système, ce dernier est bloquer tant que le systeme n'a pas terminer, ce qui peut etre long selon les cas, l'un des example fontion pouvant provoquer un appelle bloquant est `read()`.
 
+### Mutex
 
+Mutex est une class de C# .net bloquant l'accès a une section proteger, permetant a un seul thread a la fois d'y accéder, bloquant les autre a lentrer du Mutex, un Mutex revient retaper `Lock`. On definit le debut de la section proteger en mettant `"MutexIstance".WaitOne()`, et la fin en mettant `"MutexInstance".ReleaseMutex()`
+```cs
+public class testMutex {
+	private  static Mutex mut = new Mutex();
+	
+	public void CreatThred() {
+		for (int i = 0; i < number_of_thread; i++) {
+			Thread newThread = new Thread(new ThreadStart(methodName));
+			newThread.Start();
+		}
+	}
+	
+	public void methodName() {
+		// before protected section
+		mut.WaitOne();
+		// protected section
+		mut.ReleaseMutex();
+		// end of protected section
+	}
+}
+```
+On peu egalement utiliser `WaitOne()` pour set un timeout qui si la section protege prend plus de temps que celui indiquer (en ms) alors renvoie false, et le thread qui attand la section n'aquiere pas le mutex et donc n'appelle pas `ReleaseMutex()` qui est appeler uniquement par le tread qui est entrer.
+```cs
+public class testMutex {
+	private  static Mutex mut = new Mutex();
+	
+	public void CreatThred() {
+		for (int i = 0; i < number_of_thread; i++) {
+			Thread newThread = new Thread(new ThreadStart(methodName));
+			newThread.Start();
+		}
+	}
+	
+	public void methodName() {
+		// before protected section
+		if (mut.WaitOne(1000)) {
+			// protected section
+			mut.ReleaseMutex();
+			// end of protected section
+		} else {
+			// timeout
+		}
+	}
+}
+```
