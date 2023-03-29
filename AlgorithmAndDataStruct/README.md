@@ -100,8 +100,6 @@ forach (var elem in integerArray) {
  ![](Image/stack.jpg) 
 on crée et manipule une stack comme suit :
 ```cs
-Stack myStack = new Stack() {1, 2, 3};
-// ou
 Stack myStack = new Stack();
  myStack.Push(1);
  myStack.Push(2);
@@ -119,8 +117,6 @@ foreach (var elem in myStack) {
  ![](Image/queu.jpg) 
 on crée et manipule une stack comme suit :
 ```cs
-Queue myQ = new Queue() {1, 2, 3}
-// ou
 Queue myQ = new Queue();
 myQ.Enqueue(1);
 myQ.Enqueue(2);
