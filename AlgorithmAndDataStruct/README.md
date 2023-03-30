@@ -129,6 +129,31 @@ foreach (var elem in myQ) {
 // result : 1, 2, 3, 
 ```
 
+### List
+
+List est une colection qui permet de creer un tableau d'allocation dynamics, d'ajouter de supprimer mais aussi d'inserer ou supprimer un element a un index précit avec les methods `Insert` et  `RemoveAt`
+```cs
+\\ creation list
+List<int> numbers = new List<int>() {1, 2, 3};
+\\ Ajout
+numbers.Add(5); \\ numbers : [1, 2, 3, 5]
+\\ ajout a un index precit
+numbers.Insert(3, 4); \\ numbers : [1, 2, 3, 4, 5]
+\\ supprime un element a un index precit
+numbers.RemoveAt(3); \\ numbers : [1, 2, 3, 5]
+numbers.Clear(); \\ numbers : []
+```
+### HashSet
+
+HashSet est une collection qui permet de stocker des éléments de unique :
+ 
+ ```cs
+ HashSet<int> testHash = new HashSet<int>() {1, 2};
+testHash.Add(3); \\ testHash : [1, 2, 3]
+testHash.Add(2); \\ testHash: [1, 2, 3]
+```
+pour pouvoir utiliser haset sur des class créer, il faut overide les methode `GetHashCode` et `Equal` de sort que pour deux hashCode identique `Equal` revoit true et inversement.
+
 
 ## Les arbres binaires
 
