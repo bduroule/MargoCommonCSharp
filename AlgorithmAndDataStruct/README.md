@@ -75,8 +75,85 @@ public MyLinkedListNode<T> SortMiddleList()
 }
 ```
 ### tableau
-- La principale différence entre un tableau et une liste c'est la manière dont elle sont stocker dans la mémoire la liste a ces maillons éparpiller dans la mémoire la ou le tableau est un suite d'élément qui ce suivent dans la mémoire 
+
+- La principale différence entre un tableau et une liste c'est la manière dont elle sont stocker dans la mémoire la liste a ces maillons éparpiller dans la mémoire la ou le tableau est un suite d'élément qui ce suivent dans la mémoire, on peut initialiser un tableau comme suit :
+```cs
+int[] integerArray = new int[] {1, 2, 3, 4};
+MyObject[] objectArray = new MyObject[] { new MyObject(1), new MyObject(2) };
+
+// on peut les parcourir avec un for
+for (int i = 0; i < integerArray; i++) {
+	Console.WriteLine($"{integerArray[i]}");
+}
+
+// ou avec un foreach
+forach (var elem in integerArray) {
+	Console.WriteLine($"{eleme}");
+}
+```
+
 - voir trie dans le chapitre dédier
+
+### Stack & Queu
+
+- Sack est une collection qui stock les donner dans lordre d'ajout et les les sort dans ce meme ordre 
+ ![](Image/stack.jpg) 
+on crée et manipule une stack comme suit :
+```cs
+Stack myStack = new Stack();
+ myStack.Push(1);
+ myStack.Push(2);
+ myStack.Push(3);
+
+// parcour
+foreach (var elem in myStack) {
+	Console.Write($"{eleme}, ");
+}
+
+// result : 3, 2, 1, 
+``` 
+
+- queu vas creer un queu delement ou le premiere element element entré sera le premier sortie
+ ![](Image/queu.jpg) 
+on crée et manipule une stack comme suit :
+```cs
+Queue myQ = new Queue();
+myQ.Enqueue(1);
+myQ.Enqueue(2);
+myQ.Enqueue(3);
+
+// parcour
+foreach (var elem in myQ) {
+	Console.Write($"{eleme}, ");
+}
+// result : 1, 2, 3, 
+```
+
+### List
+
+List est une colection qui permet de creer un tableau d'allocation dynamics, d'ajouter de supprimer mais aussi d'inserer ou supprimer un element a un index précit avec les methods `Insert` et  `RemoveAt`
+```cs
+\\ creation list
+List<int> numbers = new List<int>() {1, 2, 3};
+\\ Ajout
+numbers.Add(5); \\ numbers : [1, 2, 3, 5]
+\\ ajout a un index precit
+numbers.Insert(3, 4); \\ numbers : [1, 2, 3, 4, 5]
+\\ supprime un element a un index precit
+numbers.RemoveAt(3); \\ numbers : [1, 2, 3, 5]
+numbers.Clear(); \\ numbers : []
+```
+### HashSet
+
+HashSet est une collection qui permet de stocker des éléments de unique :
+ 
+ ```cs
+ HashSet<int> testHash = new HashSet<int>() {1, 2};
+testHash.Add(3); \\ testHash : [1, 2, 3]
+testHash.Add(2); \\ testHash: [1, 2, 3]
+```
+pour pouvoir utiliser haset sur des class créer, il faut overide les methode `GetHashCode` et `Equal` de sort que pour deux hashCode identique `Equal` revoit true et inversement.
+
 
 ## Les arbres binaires
 
