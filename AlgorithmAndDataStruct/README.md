@@ -1,5 +1,5 @@
 # L’algorithmique et les structures de données
-## Les listes chaînées et les tableaux
+## Collection et structure de donnée
 ### Les listes chaînées
 
  -  sur la figure ci-dessous on peux voire une représentation schématiquement une liste chaînée d’entiers. 
